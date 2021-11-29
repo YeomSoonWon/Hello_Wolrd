@@ -306,8 +306,7 @@ public final class DrawManager {
 		String playString = "Play";
 		String highScoresString = "High scores";
 		String exitString = "exit";
-		String manualString = "Manual";
-		String settingString = "Setting";
+		String setting = "setting";
 
 		if (option == 2)
 			backBufferGraphics.setColor(Color.GREEN);
@@ -321,25 +320,18 @@ public final class DrawManager {
 			backBufferGraphics.setColor(Color.WHITE);
 		drawCenteredRegularString(screen, highScoresString, screen.getHeight()
 				/ 3 * 2 + fontRegularMetrics.getHeight() * 2);
-		if (option == 4)
-			backBufferGraphics.setColor(Color.GREEN);
-		else
-			backBufferGraphics.setColor(Color.WHITE);
-		drawCenteredRegularString(screen, manualString, screen.getHeight() / 3
-				* 2 + fontRegularMetrics.getHeight() * 4);
-		if (option == 5)
-			backBufferGraphics.setColor(Color.GREEN);
-		else
-			backBufferGraphics.setColor(Color.WHITE);
-		drawCenteredRegularString(screen, settingString, screen.getHeight() / 3
-				* 2 + fontRegularMetrics.getHeight() * 6);
 		if (option == 0)
 			backBufferGraphics.setColor(Color.GREEN);
 		else
 			backBufferGraphics.setColor(Color.WHITE);
 		drawCenteredRegularString(screen, exitString, screen.getHeight() / 3
-				* 2 + fontRegularMetrics.getHeight() * 8);
-
+				* 2 + fontRegularMetrics.getHeight() * 6);
+		if (option == 4)
+			backBufferGraphics.setColor(Color.GREEN);
+		else
+			backBufferGraphics.setColor(Color.WHITE);
+		drawCenteredRegularString(screen, setting, screen.getHeight() / 3
+				* 2 + fontRegularMetrics.getHeight() * 4);
 	}
 
 	/**
@@ -573,5 +565,24 @@ public final class DrawManager {
 		else
 			drawCenteredBigString(screen, "GO!", screen.getHeight() / 2
 					+ fontBigMetrics.getHeight() / 3);
+	}
+	
+	public void drawSettingTitle(final Screen screen) {
+		String settingString = "Setting";
+		String instructionString = "Press Space to return";
+		
+		backBufferGraphics.setColor(Color.GREEN);
+		drawCenteredBigString(screen, settingString, screen.getHeight() / 8);
+
+		backBufferGraphics.setColor(Color.GRAY);
+		drawCenteredRegularString(screen, settingString,
+				screen.getHeight() / 5);
+	}
+	
+	public void drawSetting(final Screen screen) {
+		String setting = "Setting";
+		backBufferGraphics.setColor(Color.WHITE);
+		drawCenteredRegularString(screen, setting, screen.getHeight()
+				/ 4 + fontRegularMetrics.getHeight() * 2);
 	}
 }
