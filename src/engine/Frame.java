@@ -1,12 +1,8 @@
 package engine;
 
-import java.awt.BorderLayout;
 import java.awt.Insets;
-import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 
 import screen.Screen;
 
@@ -17,7 +13,7 @@ import screen.Screen;
  * 
  */
 @SuppressWarnings("serial")
-public class Frame extends JFrame{
+public class Frame extends JFrame {
 
 	/** Frame width. */
 	private int width;
